@@ -7,22 +7,27 @@
  * @tree: root of tree
  * Return: incremented count
  */
-int binary_tree_balance(const binary_tree_t *tree)
+size_t binary_tree_height(const binary_tree_t *tree)
 {
-	int l = 0;
-	int r = 0;
+	size_t l = 0;
+	size_t r = 0;
 
 	if (tree == NULL)
 	{
 		return (0);
 	}
-	if (tree->right)
-		r = binary_tree_balance(tree->right) + 1;
-	else
-		r = binary_tree_balance(tree->right);
-	if (tree->left)
-		l = binary_tree_balance(tree->left) + 1;
-	else
-		l = binary_tree_balance(tree->left);
-	return (r - l);
+	r = binary_tree_height(tree->right);
+	l = binary_tree_height(tree->left);
+	if (l > r)
+		return (l + 1);
+	return (r + 1);
+}
+/**
+ * binary_tree_balance - calculates balance
+ * @tree: root of tree
+ * Return: balance factor
+ */
+int binary_tree_balance(const binary_tree_t *tree)
+{
+	return(binary_tree_height(tree->left) - binary_tree_height(tree->right));
 }
