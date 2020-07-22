@@ -3,7 +3,7 @@
 #include "binary_trees.h"
 
 /**
- * binary_tree_sibling - return sibling node
+ * binary_tree_uncle - return sibling node
  * @node: root of tree
  * Return: pointer to node
  */
