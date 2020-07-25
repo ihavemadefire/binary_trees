@@ -3,8 +3,9 @@
 #include "binary_trees.h"
 
 /**
- * main - Entry point
- *
+ * bst_insert - Entry point
+ * @tree: tree
+ * @value: value
  * Return: Always 0 (Success)
  */
 bst_t *bst_insert(bst_t **tree, int value)
@@ -19,7 +20,12 @@ bst_t *bst_insert(bst_t **tree, int value)
 	else
 		return (bst_insert_guts(*tree, value));
 }
-
+/**
+ * bst_insert_guts - Entry point
+ * @node: tree
+ * @value: value
+ * Return: Always 0 (Success)
+ */
 bst_t *bst_insert_guts(bst_t *node, int value)
 {
 	if (node->n == value)
