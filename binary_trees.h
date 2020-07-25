@@ -49,4 +49,6 @@ binary_tree_t *binary_trees_ancestor(const binary_tree_t *first, const binary_tr
 binary_tree_t *binary_trees_ancestor_shell(binary_tree_t *tree, const binary_tree_t *first, const binary_tree_t *second);
 int binary_tree_is_bst(const binary_tree_t *tree);
 int binary_tree_is_bst_shunt(const binary_tree_t *tree, int min, int max);
+bst_t *bst_insert(bst_t **tree, int value);
+bst_t *bst_insert_guts(bst_t *node, int value);
 #endif
