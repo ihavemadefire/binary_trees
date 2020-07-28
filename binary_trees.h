@@ -45,11 +45,19 @@ binary_tree_t *binary_tree_sibling(binary_tree_t *node);
 binary_tree_t *binary_tree_uncle(binary_tree_t *node);
 int isPerf(const binary_tree_t *tree, int i, int j);
 int binary_tree_depth_left(const binary_tree_t *tree);
-binary_tree_t *binary_trees_ancestor(const binary_tree_t *first, const binary_tree_t *second);
-binary_tree_t *binary_trees_ancestor_shell(binary_tree_t *tree, const binary_tree_t *first, const binary_tree_t *second);
+binary_tree_t *binary_trees_ancestor(const binary_tree_t *first,
+				     const binary_tree_t *second);
+binary_tree_t *binary_trees_ancestor_shell(binary_tree_t *tree,
+					   const binary_tree_t *first,
+					   const binary_tree_t *second);
 int binary_tree_is_bst(const binary_tree_t *tree);
 int binary_tree_is_bst_shunt(const binary_tree_t *tree, int min, int max);
 bst_t *bst_insert(bst_t **tree, int value);
 bst_t *bst_insert_guts(bst_t *node, int value);
 int binary_value_srch(const binary_tree_t *tree, int value);
+void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int));
+void push(const binary_tree_t **queue, int *rear, const binary_tree_t *new);
+const binary_tree_t *pop(const binary_tree_t **queue, int *front);
+const binary_tree_t **buildQueue(int *front, int *rear, const binary_tree_t *tree);
+int tree_size(const binary_tree_t *tree);
 #endif
