@@ -8,7 +8,8 @@
  * @second: second
  * Return: return
  */
-binary_tree_t *binary_trees_ancestor(const binary_tree_t *first, const binary_tree_t *second)
+binary_tree_t *binary_trees_ancestor(const binary_tree_t *first,
+const binary_tree_t *second)
 {
 	binary_tree_t *tree = (binary_tree_t *)first;
 
@@ -31,7 +32,8 @@ binary_tree_t *binary_trees_ancestor(const binary_tree_t *first, const binary_tr
  * @second: second
  * Return: return
  */
-binary_tree_t *binary_trees_ancestor_shell(binary_tree_t *tree, const binary_tree_t *first, const binary_tree_t *second)
+binary_tree_t *binary_trees_ancestor_shell(binary_tree_t *tree,
+const binary_tree_t *first, const binary_tree_t *second)
 {
 	binary_tree_t *l;
 	binary_tree_t *r;
