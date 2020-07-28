@@ -55,9 +55,10 @@ const binary_tree_t *first, const binary_tree_t *second)
 		return (r);
 }
 /**
- *
- *
- *
+ * binary_value_srch - searches tree for given value
+ * @tree: tree
+ * @i: i
+ * Return: 0 or 1
  */
 int binary_value_srch(const binary_tree_t *tree, int i)
 {
@@ -73,7 +74,7 @@ int binary_value_srch(const binary_tree_t *tree, int i)
 	k = binary_value_srch(tree->left, i);
 
 	if (k)
-		return 1;
+		return (1);
 	l = binary_value_srch(tree->right, i);
-	return l;
+	return (l);
 }
