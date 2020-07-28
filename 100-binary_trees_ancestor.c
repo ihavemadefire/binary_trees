@@ -13,7 +13,6 @@ const binary_tree_t *second)
 {
 	binary_tree_t *tree = (binary_tree_t *)first;
 
-
 	if (first == NULL || second  == NULL)
 		return (NULL);
 
@@ -22,6 +21,8 @@ const binary_tree_t *second)
 
 		tree = tree->parent;
 	}
+	if (binary_value_srch(tree, second->n) == 0)
+		return (NULL);
 	return (binary_trees_ancestor_shell(tree, first, second));
 }
 
@@ -52,4 +53,27 @@ const binary_tree_t *first, const binary_tree_t *second)
 		return (l);
 	else
 		return (r);
+}
+/**
+ *
+ *
+ *
+ */
+int binary_value_srch(const binary_tree_t *tree, int i)
+{
+	int k;
+	int l;
+
+	if (tree == NULL)
+		return (0);
+
+	if (tree->n == i)
+		return (1);
+
+	k = binary_value_srch(tree->left, i);
+
+	if (k)
+		return 1;
+	l = binary_value_srch(tree->right, i);
+	return l;
 }
