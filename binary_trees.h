@@ -51,4 +51,5 @@ int binary_tree_is_bst(const binary_tree_t *tree);
 int binary_tree_is_bst_shunt(const binary_tree_t *tree, int min, int max);
 bst_t *bst_insert(bst_t **tree, int value);
 bst_t *bst_insert_guts(bst_t *node, int value);
+int binary_value_srch(const binary_tree_t *tree, int value);
 #endif
